@@ -39,8 +39,8 @@ a {
 .logo {
     z-index: 99;
     position: absolute;
-    top: 12px;
-    left: 0px;
+    top: 10px;
+    left: 5px;
 }
 .logo a {
     text-decoration: none;
@@ -262,23 +262,6 @@ input[type=number]::-webkit-outer-spin-button {
             "email";
         grid-column-gap: 0px;
         grid-row-gap: 20px;
-    }
-
-    .logo {
-        z-index: 99;
-        position: absolute;
-        line-height: 0;
-        top: 25px;
-        left: 30px;
-    }
-    .logo a {
-        background: none;
-        padding: 0;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 550;
-        color: #1b1d1e;
-        border-radius: 5px;
     }
     .return a {
         background: #2d8dc5;
