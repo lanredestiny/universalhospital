@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Link to Fontawasome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Google Font link -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Serif+Pro|Open+Sans" rel="stylesheet">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="../css/register.css">
+    <!-- Font-awesome link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>UniversalHospital/Register</title>
+</head>
+<body>
+    <div class="logo"><a href="home.html"> <span>U</span>H </a></div>
+
+    <div class="return">
+        <a href="home.html"><i class="fas fa-arrow-left"></i> Return </a>
+    </div>
+    <main>
+        <div class="register">
+            <div class="container">
+                <div class="left-image">
+                    <!-- <img src="../images/doctor4.jpg" alt=""> -->
+                </div>
+                <div class="register-input">
+                    <div class="register-input-text">
+                        <h3>Become a member of Universal Hospital</h3>
+                        <p>All you need to do, is register by filling all the form. We will get back to you as soon as posible.</p>
+                    </div>
+                    <form action="message.html" id="registrationForm" method="POST" onsubmit="return formValidation();">
+                        <div class="input-right">
+                            <div class="firstName">
+                                <label for="firstName">First Name</label>
+                                <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                                <small id="firstNameError"></small>
+                            </div>
+                            <div class="lastName">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                                <small id="lastNameError"></small>
+                            </div>
+                            <div class="phoneNumber">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="number" name="phoneNumber" id="phoneNumber" placeholder="*** **** ****">
+                                <small id="phoneNumberError"></small>
+                            </div>
+                            <div class="gender">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender">
+                                    <option class="male" value="selectedGender"> --- Select gender --- </option>
+                                    <option class="male" value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="others">Others</option>
+                                </select>
+                                <small id="genderError"></small>
+                            </div>
+                            <div class="email">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                                <button><i class="fas fa-arrow-right" onclick="formValidation()"></i></button>
+                                <small id="emailError"></small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="../js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+* {box-sizing:border-box}
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, small {
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+    color: #313131;
+    line-height: 60px;
+}
+h2 {
+    font-size: 2.5rem;
+    font-weight: 550;
+    color: #1b1d1e;
+    margin-bottom: 0px;
+}
+h3 {
+    font-size: 2em;
+    font-weight: 550;
+    color: #1b1d1e;
+    margin-bottom: 0px;
+}
+p {
+    font-size: 18px;
+    color: #818283;
+    line-height: 30px;
+    font-family: 'Source Serif Pro', serif;
+}
+a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+.logo {
+    z-index: 99;
+    position: absolute;
+    top: 12px;
+    left: 0px;
+}
+.logo a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2d8dc5;
+    border: 2px solid #2d8dc5;
+    padding: 10px 8px 4px 8px;
+}
+.logo a span {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2d8dc5;
+}
+.return {
+    z-index: 99;
+    position: absolute;
+    line-height: 0;
+    top: 30px;
+    right: 30px;
+}
+.return a {
+    background: #2d8dc5;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 550;
+    color: #fff;
+    border-radius: 5px;
+}
+.return a i {
+    font-size: 14px;
+}
+
+.register .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.register .left-image {
+    /* max-width: 100%; */
+    background: url(../images/doctor4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+}
+.register .register-input {
+    width: 80%;
+    margin: auto;
+}
+.register .input-right {
+    justify-self: start;
+    display: grid;
+    grid-template-areas:
+        "firstName lastName"
+        "phoneNumber gender"
+        "email email";
+    grid-column-gap: 40px;
+    grid-row-gap: 30px;
+}
+
+/* input */
+.firstName, .lastName, .phoneNumber, .gender, .email {
+    width: 100%;
+}
+.email {
+    grid-area: email;
+    position: relative;
+}
+.firstName label, .lastName label, .phoneNumber label, .gender label, .email label {
+    display: block;
+    margin-bottom: 5px;
+    color: #313131;
+}
+.firstName input, .lastName input, .phoneNumber input, .gender select, .email input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #313131;
+    padding: 0 5px;
+    margin-bottom: 5px;
+}
+::placeholder {
+    color: #8d8d8d;
+}
+.gender select {
+    color: #8d8d8d;
+}
+.gender select option {
+    color: #1b1d1e;
+    margin: 40px;
+}
+input:focus, select:focus {
+    outline: none;
+    background: #E8F0FE;
+}
+select:focus {
+    cursor: pointer;
+    background: #E8F0FE;
+}
+select option:hover, select:hover {
+    cursor: pointer;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.register .register-input .register-input-text {
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.register button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: none;
+    border: 0;
+    z-index: 1;
+    background: #2d8dc5;
+    padding: 15px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+}
+.register button i {
+    font-size: 1.2em;
+    z-index: 2;
+    color: #fff;
+    cursor: pointer;
+}
+.register button:hover {
+    background: #8BCBEF;
+}
+
+/* error message */
+.register small {
+    color: rgb(255, 52, 52);
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .register .left-image {
+        /* max-width: 100%; */
+        background: url(../images/doctor4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 130vh;
+        max-width: 100%;
+    }
+
+    .register .input-right {
+        justify-self: start;
+        display: grid;
+        grid-template-areas:
+            "firstName"
+            "lastName"
+            "phoneNumber"
+            "gender"
+            "email";
+        grid-column-gap: 40px;
+        grid-row-gap: 20px;
+    }
+
+    .register .register-input .register-input-text {
+        max-width: 100%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        /* background: linear-gradient(0deg,rgba(175, 246, 255, 0.859),rgba(175, 246, 255, 0.859)), url(../images/doctor4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 120vh;
+        max-width: 100%; */
+        height: 120vh;
+    }
+    .register .container {
+        display: block;
+    }
+    .register .register-input {
+        width: 80%;
+        margin: auto;
+        margin-top: 100px;
+    }
+    .register .left-image {
+        /* max-width: 100%; */
+        background: url(../images/doctor4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        max-width: 100%;
+        display: none;
+    }
+
+    .register .input-right {
+        justify-self: start;
+        display: grid;
+        grid-template-areas:
+            "firstName"
+            "lastName"
+            "phoneNumber"
+            "gender"
+            "email";
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+    }
+
+    .logo {
+        z-index: 99;
+        position: absolute;
+        line-height: 0;
+        top: 25px;
+        left: 30px;
+    }
+    .logo a {
+        background: none;
+        padding: 0;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 550;
+        color: #1b1d1e;
+        border-radius: 5px;
+    }
+    .return a {
+        background: #2d8dc5;
+        padding: 8px 15px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 550;
+        color: #fff;
+        border-radius: 5px;
+    }
+    .return a i {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+

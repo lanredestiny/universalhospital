@@ -1,0 +1,264 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+h1, h2, small {
+    font-family: 'Roboto', sans-serif;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 550;
+    color: #1b1d1e;
+    margin-bottom: 10px;
+}
+p {
+    font-size: 19px;
+    color: #818283;
+    line-height: 28px;
+    font-family: 'Source Serif Pro', serif;
+}
+a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.one-page {
+    height: 92vh;
+    position: relative;
+}
+
+.one-page .images img {
+    max-width: 8rem;
+    position: absolute;
+    opacity: 0.5;
+}
+
+.one-page .images .img1 {
+    top: 50px;
+    z-index: -1;
+}
+
+.one-page .images .img2 {
+    top: 100px;
+    left: 500px;
+    z-index: -1;
+    transform: rotate(60deg);
+}
+
+.one-page .images .img3 {
+    top: 100px;
+    right: 50px;
+    z-index: -1;
+    transform: rotate(30deg);
+}
+
+.one-page .images .img4 {
+    top: 0px;
+    left: 800px;
+    z-index: -1;
+    transform: rotate(90deg);
+}
+
+.one-page .images .img5 {
+    bottom: -20px;
+    left: 0px;
+    z-index: -1;
+    transform: rotate(60deg);
+}
+
+.one-page .logo img {
+    margin-top: 20px;
+    max-width: 10rem;
+}
+
+.one-page .logo a {
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+.one-page .showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 60px 0 70px 0;
+}
+
+.one-page .showcase .showcase-col1 {
+    max-width: 90%;
+    align-self: center;
+}
+
+.one-page .showcase .showcase-col1 h2 span {
+    color: #4DAFA7;
+}
+
+.one-page .showcase .showcase-col1 p {
+    margin-bottom: 30px;
+}
+
+.one-page .showcase .showcase-col1 p span {
+    border-bottom: 1px solid #4DAFA7;
+}
+
+.one-page .showcase .showcase-col1 a {
+    background: #0C6E90;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+.one-page .showcase .showcase-col1 a i {
+    margin-left: 8px;
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.79,.18,.55,1.09);
+    animation-direction: alternate;
+}
+
+@keyframes arrow {
+    0% {transform: translateX(0)}
+    100% {transform: translateX(100%)}
+}
+
+.one-page .showcase .showcase-col2 img {
+    max-width: 100%;
+}
+
+footer {
+    background: #0C6E90;
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+}
+
+footer .footer-inner a {
+    text-decoration: none;
+    color: #4DAFA7;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .one-page .showcase {
+        display: grid;
+        grid-template-areas: 
+            "image image"
+            "text text"
+    }
+
+    .one-page {
+        height: 145vh;
+    }
+
+    .one-page .showcase .showcase-col2 {
+        grid-area: image;
+    }
+
+    .one-page .showcase .showcase-col2 .img {
+        width: 100%;
+    }
+
+    .one-page .showcase .showcase-col1 {
+        grid-area: text;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .one-page .images .img1 {
+        top: 50px;
+        z-index: -1;
+    }
+    
+    .one-page .images .img2 {
+        top: 300px;
+        left: 100px;
+        z-index: -1;
+        transform: rotate(60deg);
+    }
+    
+    .one-page .images .img3 {
+        top: 250px;
+        right: 100px;
+        z-index: -1;
+        transform: rotate(30deg);
+    }
+    
+    .one-page .images .img4 {
+        top: 0px;
+        left: 400px;
+        z-index: -1;
+        transform: rotate(90deg);
+    }
+    
+    .one-page .images .img5 {
+        bottom: 0px;
+        left: 100px;
+        z-index: -1;
+        transform: rotate(60deg);
+        opacity: 0.8;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .one-page {
+        height: 130vh;
+    }
+
+    .one-page .showcase .showcase-col1 {
+        grid-area: text;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .one-page .images img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .one-page {
+        height: 120vh;
+    }
+
+    .one-page .images img {
+        display: none;
+    }
+}
