@@ -35,6 +35,7 @@ a {
     font-size: 12px;
     font-weight: 550;
     letter-spacing: 1px;
+    outline: none;
 }
 
 .container {

@@ -27,6 +27,7 @@ a {
     font-size: 14px;
     font-weight: 550;
     letter-spacing: 1px;
+    outline: none;
 }
 
 .container {
