@@ -36,7 +36,7 @@ a {
 }
 
 .one-page {
-    height: 92vh;
+    height: 100vh;
     position: relative;
 }
 
@@ -172,7 +172,7 @@ footer .footer-inner a {
     }
 
     .one-page {
-        height: 145vh;
+        height: 900px;
     }
 
     .one-page .showcase .showcase-col2 {
